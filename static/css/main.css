@@ -1,0 +1,70 @@
+/* Couleurs globales */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --border-radius: 8px;
+}
+
+/* Corps général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    flex-wrap: wrap; /* Permet d'adapter la navigation sur plusieurs lignes si nécessaire */
+}
+
+header nav ul li {
+    margin: 5px 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section principale */
+main {
+    padding: 20px;
+}
+
+/* Responsive design pour toutes les sections */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Médias queries globales */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}

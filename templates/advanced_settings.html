@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres Avancés</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/advanced_settings.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Accueil</a></li>
+                <li><a href="{{ url_for('session_live') }}">Session Live</a></li>
+                <li><a href="{{ url_for('control') }}">Contrôle</a></li>
+                <li><a href="{{ url_for('data') }}">Données</a></li>
+                <li><a href="{{ url_for('config') }}">Paramètres</a></li>
+                <li><a href="{{ url_for('about') }}">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="advanced-settings">
+            <h2>Paramètres Avancés</h2>
+            <form action="#" method="post">
+                <label for="debug">Activer le mode debug :</label>
+                <select id="debug" name="debug">
+                    <option value="on">Oui</option>
+                    <option value="off" selected>Non</option>
+                </select>
+                
+                <label for="log">Niveau de warning :</label>
+                <select id="log" name="log">
+                    <option value="info" selected>Info</option>
+                    <option value="warning">Warning</option>
+                    <option value="error">Error</option>
+                </select>
+
+                <button type="submit">Appliquer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Projet Rover Agricole JUNIA HEI</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

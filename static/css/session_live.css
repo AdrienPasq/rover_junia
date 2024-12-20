@@ -1,0 +1,75 @@
+/* Design général pour la page Session Live */
+.live-video, .map, .live-data {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#video-stream, #map-container {
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Texte alternatif si le flux vidéo ou la carte n'est pas chargé */
+#video-stream::before, #map-container::before {
+    color: var(--text-secondary-color);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Tableaux des données en direct */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    color: var(--primary-text-color);
+}
+
+tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Responsivité */
+@media screen and (max-width: 768px) {
+    #video-stream, #map-container {
+        height: 240px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}

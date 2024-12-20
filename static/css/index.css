@@ -1,0 +1,55 @@
+/* Section d'introduction */
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Galerie d'images */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Adapte la galerie sur plusieurs lignes si nécessaire */
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.image-box {
+    width: 100%; /* Par défaut, occupe toute la largeur disponible */
+    max-width: 200px; /* Limite la taille maximale */
+    height: auto;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    aspect-ratio: 4 / 3; /* Maintient un ratio largeur/hauteur */
+}
+
+/* Chart */
+.chart {
+    text-align: center;
+}
+
+#chart-container {
+    width: 100%;
+    height: auto; /* Adapte la hauteur automatiquement */
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Médias queries spécifiques */
+@media (max-width: 768px) {
+    .gallery {
+        gap: 10px;
+    }
+
+    .image-box {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box {
+        max-width: 100px;
+    }
+}

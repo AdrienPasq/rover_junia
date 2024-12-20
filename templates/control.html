@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrôle du Rover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/control.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Accueil</a></li>
+                <li><a href="{{ url_for('session_live') }}">Session Live</a></li>
+                <li><a href="{{ url_for('control') }}">Contrôle</a></li>
+                <li><a href="{{ url_for('data') }}">Données</a></li>
+                <li><a href="{{ url_for('config') }}">Paramètres</a></li>
+                <li><a href="{{ url_for('about') }}">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="control-video">
+            <h2>Flux Vidéo</h2>
+            <div id="video-stream">
+                <iframe 
+                    src="{{ video_stream_url }}" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    width="640" 
+                    height="480">
+                </iframe>
+            </div>
+        </section>
+        <section class="controls">
+            <h2>Contrôles du Rover</h2>
+            <div class="control-buttons">
+                <button id="arrow-up" class="arrow-key">↑</button>
+                <button id="arrow-down" class="arrow-key">↓</button>
+                <button id="arrow-left" class="arrow-key">←</button>
+                <button id="arrow-right" class="arrow-key">→</button>
+                <button id="take-measure" class="action-key">Prendre Mesure</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Projet Rover Agricole JUNIA HEI</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/control.js') }}"></script>
+</body>
+</html>

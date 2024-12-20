@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails d'une Session</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/session_details.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Accueil</a></li>
+                <li><a href="{{ url_for('session_live') }}">Session Live</a></li>
+                <li><a href="{{ url_for('control') }}">Contrôle</a></li>
+                <li><a href="{{ url_for('data') }}">Données</a></li>
+                <li><a href="{{ url_for('config') }}">Paramètres</a></li>
+                <li><a href="{{ url_for('about') }}">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="details">
+            <h2>Détails de la Session</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Coordonnées</th>
+                        <th>Température</th>
+                        <th>Humidité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-12-18 10:00</td>
+                        <td>(12.345, 67.890)</td>
+                        <td>25°C</td>
+                        <td>60%</td>
+                    </tr>
+                    <!-- Autres lignes -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Projet Rover Agricole JUNIA HEI</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
